@@ -3,7 +3,8 @@
 <ul id="materials">
   <% @materials.each do |material| %>
     <li>
-      <%= link_to material.name, material_path(material) %>
+      <%= link_to material.name, material_path(material), class: 'materials_name' %>
     </li>
   <% end %>
 </ul>
+<%= link_to "Create a New Material Listing", new_material_path, class: "new_material" %>
